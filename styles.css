@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i');
+
 body{
     width: 100%;
     height: 100%;
@@ -6,7 +8,7 @@ body{
     background-color: rgb(18, 18, 18);
     color: rgb(255, 255, 255, 0.87);
     font-size: 1rem;
-    font-family: Roboto, Arial, sans-serif;
+    font-family: Roboto;
     line-height: 1.5rem;
     font-weight: 400;
     text-rendering: optimizelegibility;
@@ -52,7 +54,7 @@ div{
     width: 300px;
     height: 70px;
     display: block;
-    background-image: url("/Images/logo.png");
+    background-image: url("/TC2005B/Lab1/Images/logo.png");
     background-size: 100% auto;
     background-repeat: no-repeat;
     order: 1;
@@ -117,6 +119,10 @@ a{
     font-size: 1rem;
     padding: 0.5rem 1.5rem;
     margin: 0px;
+
+    display: block;
+    text-align: center;
+    
 }
 
 .cta-btn:hover{
@@ -131,8 +137,37 @@ a{
     background: rgb(18, 18, 18);
 }
 
+.emoji{
+    margin-left: 1rem;
+    width: 3rem;
+    height: 3rem;
+    transition: all 200ms ease-in;
+}
+
+.emoji:hover{
+    transform:rotateZ(20deg);
+}
+
+.title{
+    font-size: 2.625rem;
+    line-height: 4rem;
+    margin-bottom: 0px;
+    font-family: Roboto;
+}
+
+h1{
+    font-weight: 700;
+    color: rgb(250, 250, 250);
+}
+
 .description{
     margin-bottom: 2rem;
+}
+
+.subtitle{
+    margin-top: -0.75rem;
+    font-size: 1.85rem;
+    line-height: 3rem;
 }
 
 p{
@@ -142,6 +177,23 @@ p{
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     
+}
+
+.imagenes img{
+    height: 90%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.imagenes:hover .shape{
+    bottom: 40px;
+}
+
+.imagenes:hover .timmy{    
+    left: 45%;
 }
 
 .Social-Wrapper{
@@ -226,6 +278,8 @@ h3{
     font-size: 1.75rem;
     line-height: 2.25rem;
     color: rgb(250, 250, 250);
+    
+    margin-bottom: 3rem;
 }
 
 .image-content{
@@ -288,6 +342,21 @@ h3{
     width: 30px;
     height: 30px;
     margin-right: 10px;
+    opacity: 1;
+}
+
+.github-image{
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    opacity: 0.65;
+    transition: all 200ms ease-in;
+}
+
+.github-image:hover{
+    opacity: 1;
 }
 
 .projects{
@@ -316,15 +385,13 @@ h3{
 }
 
 .my-projects{
-    flex-direction: column;
-    margin-top: 0px;
-    padding: 0px;
-    overflow: visible;
-
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    
 }
 
 .styledProject{
+
     -webkit-box-pack: justify;
     justify-content: space-between;
     flex-shrink: 1;
@@ -334,6 +401,8 @@ h3{
     flex-direction: row;
 
     margin-top: 2rem;
+
+   
 }
 
 .details{
@@ -369,13 +438,201 @@ h3{
 }
 
 .project1-image{
-    position: absolute;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 450px;
+    height: 250Px;
+    
+    border-radius: 1rem;
+    transition: all 200ms ease-in;
+}
+
+.project1-image:hover{
+    transform: translateY(-10px);
+}
+
+.styled-button{
+    width: 15.625rem;
+    height: 3rem;
+    background-color: rgb(250, 250, 250);
+    color: rgb(18, 18, 18);
+    padding: 1rem;
+    margin: 0px auto;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 1rem;
+    text-decoration: none;
+    text-align: center;
+
+    font-family: inherit;
+    line-height: 1.15;
+}
+
+.cta-btn2{
+    width: 15.625rem;
+    height: 3rem;
+    background-color: rgb(250, 250, 250);
+    color: rgb(18, 18, 18);
+    padding: 1rem;
+    margin: 0px 600px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 1rem;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+
+.contact{
+    width: 100%;
+    height: auto;
+    background: rgb(18,18,18);
+    margin-top: 6rem;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.contact-wrapper{
+    width: 100%;
+    max-width: 45rem;
+    height: 100%;
+    display: inline-block;
+
+    margin: 0px auto;
+    padding: 0px 2.5rem;
+}
+
+.contact-wrapper p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.profile{
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    display: flex;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    margin-top: 3rem;
+}
+
+.avatar{
+    margin-bottom: 0px;
+
+    width: 100%;
+    max-width: 8.75rem;
+    border-radius: 50%;
+    margin-right: 5rem;
+}
+
+.avatar-image{
     top: 0px;
     left: 0px;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
-    opacity: 1;
-    transition-delay: 500ms;
+    object-position: center center;
+    
+}
+
+.profile .details{
+    font-size: 1.125rem;
+    line-height: 2rem;
+}
+
+strong{
+    font-weight: bolder;
+}
+
+.underline{
+    color: rgb(250, 250, 250);
+    box-shadow: rgb(42 41 38) 0px -0.5rem 0px inset;
+    
+}
+
+.underline:hover{
+    box-shadow: rgb(42 41 38) 10px -0.2rem 100px inset;
+}
+
+.socials{
+    overflow: visible;
+
+
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    -webkit-box-pack: start;
+    justify-content: start;
+    justify-items: start;
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.last-socials{
+    margin-right: 1rem;
+
+    width: 9rem;
+    height: auto;
+    background: linear-gradient(to right, rgb(250, 250, 250) 50%, rgb(18, 18, 18) 50%) right bottom / 205% 100%;
+    border-radius: 1rem;
+    border: 0.125rem solid rgb(250, 250, 250);
+    padding: 0.5rem 1.25rem;
+    transition: all 0.1s ease-out 0s;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(250, 250, 250);
+}
+
+.last-socials a{
+    margin-bottom: 0.75rem;
+}
+
+.last-socials svg{
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.5rem;
+    margin-bottom: -0.05rem;
+}
+
+footer{
+    display: block;
+    width: 100%;
+    height: 7.5rem;
+    background: rgb(18, 18, 18);
+    border-top: 3px solid rgba(0, 0, 0, 0.32);
+    margin-top: 10rem;
+}
+
+.content-footer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+
+    max-width: 62.5rem;
+    margin: 0px auto;
+    padding: 0px 2.5rem;
+}
+
+.logo{
+    width: 300px;
+    height: 70px;
+    display: block;
+    background-image: url("/TC2005B/Lab1/Images/logo.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    order: 1;
 }
